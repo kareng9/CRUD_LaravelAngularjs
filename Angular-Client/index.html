@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body ng-app="Client"> <!--Client: Es el nombre de la aplicación-->
+<div ng-view></div> <!--ng-view es una directiva donde se renderizaran los templates-->
+  
+    <script src="components/angular.min.js"></script>
+    <script src="components/angular-resource.min.js"></script>
+    <script src="components/angular-route.min.js"></script>
+
+    <script src="scripts/router.js"></script>
+    <script src="scripts/controllers/persona.js"></script>
+    <script src="scripts/services/PersonaService.js"></script>  <!--Incorporamos nuestro servicio-->
+
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    
+</body>
+</html>

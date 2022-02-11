@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left">
+            <h5>Listado de Personas</h5>
+        </div>
+        <div class="pull-right" style="padding-top:25px">
+            <div class="box-tools" style="display:inline-table">
+              <div class="input-group">
+                  <i class="material-icons">search
+                  <input type="text" class="form-control input-sm ng-valid ng-dirty" placeholder="Buscar" ng-change="searchDB()" ng-model="searchText" name="table_search" title="" tooltip="" data-original-title="Min character length is 3">
+                  </i>
+                  <!--<span class="input-group-addon">Buscar</span>-->
+              </div>
+              <a href="#/personas/new" class="btn btn-success" data-toggle="modal" data-target="#create-user">Crear Nuevo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="row">
+    <div ng-repeat="Persona in Personas">
+        <div class="card amber darken-4">
+            <span class="card-title">{{Persona.name}}</span>
+            <p>{{Persona.lastName}}</p>
+        </div>
+        <div class="card-action">
+            <a href="#"><i class="material-icons">editar</i></a>
+            <a href="#"><i class="material-icons">borrar</i></a>
+        </div>
+    </div>
+</div>-->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<div class="table-responsiv" >
+    <table id="table">
+      <thead id="headtable">
+        <th class="id_p">ID</th>
+        <th>Nombres</th>
+        <th>Accion</th>
+      </thead>
+      <tbody id="bodytable" ng-repeat="Persona in Personas | filter:searchText">
+          <tr>
+            <td>{{Persona.id}}</td>
+              <td>{{Persona.name}} {{Persona.lastName}}</td>
+              <td>
+                  <a href="#/personas/edit/{{Persona.id}}"><i class="material-icons">edit</i></a>
+                  <a href="#" ng-click="removePersona(Persona.id)"><i class="material-icons">delete</i></a>
+              </td>
+          </tr>
+      </tbody>   
+    </table> 
+  </div>

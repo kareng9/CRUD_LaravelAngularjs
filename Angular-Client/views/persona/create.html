@@ -1,0 +1,15 @@
+<div class="card-´panel">
+{{title}}
+    <form ng-submit="savePersona()">    <!--Cuando hagamos clic en enviar se va al metodo savePersona-->
+        <div class="input-field">
+            <input placeholder="Nombre" type="text" ng-model="Persona.name">
+        </div>
+        <div class="input-field">
+            <input placeholder="Apellido" type="text" ng-model="Persona.lastName">
+        </div>
+        <button class="btn waves-effect" type="submit">
+            {{button}}
+        </button>
+        <a href="#/personas" class="btn">Regresar</a>
+    </form>
+</div>

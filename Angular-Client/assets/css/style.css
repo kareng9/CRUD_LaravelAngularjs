@@ -1,0 +1,26 @@
+#table{
+    table-layout: fixed;
+    width: 300px;
+}
+
+#table th, td {
+    border: 1px solid rgb(73, 73, 80);
+    width: 200px;
+    height: 20px;
+    word-wrap: break-word;
+    text-align: center;
+}
+th.id_p{
+    width: 20px;
+}
+
+thead#headtable{
+    background-color: rgb(176, 179, 182);
+}
+tbody#bodytable{
+    border: 1px solid rgb(186, 186, 211);
+    width: 100px;
+    height: 30px;
+    word-wrap: break-word;
+    text-align: center;
+}
